@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ErrorMessage, Field, Formik } from 'formik'
 import { Button } from 'primereact/button' 
 import  { useRef } from 'react' 
@@ -19,7 +20,7 @@ const navigate = useNavigate()
     password:string
   }
 
-  //@ts-ignore
+  
   const RecaptchaRef = useRef<any>();
 
   const initialValues: User={
@@ -46,7 +47,7 @@ const navigate = useNavigate()
       if (data && data.token) {
         localStorage.setItem("token", data.token);
         resetForm();
-        navigate("/");
+        navigate("/welcome");
       } else {
         toast.error('Login failed. Please try again.');
       }

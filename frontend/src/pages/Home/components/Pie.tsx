@@ -23,9 +23,9 @@ export default function PieChartDemo() {
                 {
                     data: [data.consumers, data.orders, data.sell],
                     backgroundColor: [
-                        documentStyle.getPropertyValue('--blue-500'),
-                        documentStyle.getPropertyValue('--yellow-500'),
-                        documentStyle.getPropertyValue('--green-500')
+                        documentStyle.getPropertyValue('--pink-500'),
+                        documentStyle.getPropertyValue('--indigo-500'),
+                        documentStyle.getPropertyValue('--teal-500')
                     ],
                     hoverBackgroundColor: [
                         documentStyle.getPropertyValue('--blue-400'),
@@ -58,7 +58,7 @@ export default function PieChartDemo() {
     }
 
     return ( 
-            <Chart type="pie" data={chartData} options={chartOptions} className="w-full lg:w-1/2" />
+            <Chart type="polarArea" data={chartData} options={chartOptions} className="w-2/3 lg:w-1/3" />
       
     )
 }

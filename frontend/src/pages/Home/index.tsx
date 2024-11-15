@@ -1,3 +1,4 @@
+import Footer from "../Footer"
 import BasicChart from "./components/Basic"
 import PieChartDemo from "./components/Pie"
 
@@ -7,6 +8,8 @@ const HomePage = ()=>{
         <BasicChart/>
 
         <PieChartDemo/>
+
+        <Footer/>
 
     </div>
 

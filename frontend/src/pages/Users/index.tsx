@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable prefer-const */
  
 import   { FormEvent, useState } from 'react'; 
 import BredCrums from '../../components/BredCrums'; 
@@ -7,6 +9,7 @@ import Loader from '../../components/Loader';
 import TableCard from './Components/Card.user';
 import { BsArrowRightCircle, BsArrowLeftCircle } from "react-icons/bs";
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import Footer from '../Footer';
 const UserPage = () => {
   const [visible, setVisible] = useState(false);
 
@@ -142,7 +145,7 @@ const UserPage = () => {
             </div>
 
       <Model visible={visible} setVisible={setVisible} />
-
+     <Footer/>
     </>
 
   )

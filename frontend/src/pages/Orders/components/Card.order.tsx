@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {   ConfirmDialog } from 'primereact/confirmdialog'
 import  { useState } from 'react'
 import {  FaRegTrashAlt } from 'react-icons/fa' 
@@ -83,7 +84,7 @@ const TableCard = ({ data, id }: any) => {
                     <ul>
                             {
                                 data.items.length>0 && data.items.map((cur:any,i:number)=>{
-                                    return <li key={i}>{cur?.name} - &#8377;{cur?.price}/-</li>
+                                    return <li key={i}>{cur?.name} - M{cur?.price}</li>
                                 })
                             }
                     </ul>

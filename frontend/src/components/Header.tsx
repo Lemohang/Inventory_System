@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
  
 import { useDispatch,  } from 'react-redux'
 import { collapsedSidebar  ,toggleSidebar } from '../provider/slice/Sidebar.slice';

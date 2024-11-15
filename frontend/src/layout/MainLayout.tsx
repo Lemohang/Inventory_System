@@ -24,7 +24,7 @@ const MainLayout = ({ children }:{children:React.ReactNode}) => {
                           <MenuItem> Line charts </MenuItem>
                       </SubMenu> */}
                       <MenuItem className="lg:hidden" onClick={() => dispatch(toggleSidebar())} > {selector.toggle ? <IoIosArrowDropright className="text-2xl" />:<IoIosArrowDropleft className="text-2xl" />} </MenuItem>
-
+                      <MenuItem component={<Link to="/Welcome" />} icon={<MdOutlineSpaceDashboard  className="text-2xl" />} > Home </MenuItem>
                       <MenuItem component={<Link to="/" />} icon={<MdOutlineSpaceDashboard  className="text-2xl" />} > Dashboard </MenuItem>
         
             <MenuItem component={<Link to="/orders" />} icon={<FiBox className="text-2xl" />}> Orders </MenuItem>

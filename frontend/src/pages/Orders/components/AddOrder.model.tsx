@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
  
 import { Dialog } from 'primereact/dialog';
 import { ErrorMessage, Field, Formik, FieldArray } from 'formik';  
@@ -75,7 +76,7 @@ const AddOrderModel = ({ visible, setVisible }: any) => {
         items:[ 
         ]
     }
-    // @ts-ignore
+    
     const onSubmitHandler = async (e: any, { resetForm }: any) => {
         try {
             // console.log(e)

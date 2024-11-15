@@ -1,3 +1,5 @@
+/* eslint-disable prefer-const */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import  { FormEvent, useState } from 'react';
 import BredCrums from '../../components/BredCrums';
@@ -9,6 +11,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import AddOrderModel from './components/AddOrder.model';
 import { useGetAllOrdersQuery } from '../../provider/queries/Orders.query';
 import TableCard from './components/Card.order';
+import Footer from '../Footer';
+import Steps from '../Steps';
 const OrdersPage = () => {
   const [visible, setVisible] = useState(false);
 
@@ -100,7 +104,8 @@ const OrdersPage = () => {
 
 
       </form>
-
+      
+      <Steps/>
       <div className={`mb-3 flex  ${(Number(SearchParams.get("page")) || 1) > 1 ? 'justify-between' : 'justify-end'}  w-[90%]  mx-auto`}>
 
         {(Number(SearchParams.get("page")) || 1) > 1 && <button onClick={onPrevPageHandler} title='Prev Page' className="text-black  text-xl lg:text-3xl p-2"><BsArrowLeftCircle /></button>}
@@ -149,7 +154,7 @@ const OrdersPage = () => {
 
 
 
-
+     <Footer/>
     </>
   )
 }

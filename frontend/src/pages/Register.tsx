@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ErrorMessage, Field, Formik } from 'formik'
 import { Button } from 'primereact/button' 
 import   { useRef } from 'react' 
@@ -12,7 +13,7 @@ const Register = () => {
   const [registerUser,registerUserResponse] = useRegisterUserMutation()
 
   const navigate  = useNavigate()
-  //@ts-ignore
+  //@t
   const RecaptchaRef = useRef<any>();
 
   type User = {
@@ -56,7 +57,7 @@ const Register = () => {
               
 
           resetForm()
-          navigate("/")
+          navigate("/login")
         } catch (error:any) {
             // toast
           toast.error(error.message);
